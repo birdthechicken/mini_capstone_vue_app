@@ -24,7 +24,8 @@
 
     <div v-for="product in products">
       <img v-bind:src="product.image_url" alt="">
-      <h2>Name: {{ product.name }}</h2>
+      <h2><router-link v-bind:to="'/products/' + product.id">Name: {{ product.name }}</router-link></h2>
+      
       <div v-if="currentProduct === product">
         <p>Description: {{ product.description }}</p>
         <p>Price: {{ product.price }}</p>
