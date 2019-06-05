@@ -5,8 +5,8 @@
     <p>Description: {{ product.description }}</p>
     <p>Price: {{ product.price }}</p>
 
-    <router-link v-bind:to="'/products/' + product.id + '/edit'">Edit</router-link>
-    <button v-on:click="destroyProduct()">Delete</button>
+    <router-link class="btn btn-warning m-1" v-bind:to="'/products/' + product.id + '/edit'">Edit</router-link>
+    <button class="btn btn-warning m-1"v-on:click="destroyProduct()">Delete</button>
 
     <img v-bind:src="product.image_url">
 
