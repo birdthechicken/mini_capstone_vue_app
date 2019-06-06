@@ -1,16 +1,16 @@
 <template>
-  <div class="products-show">
-    <h2>{{ product.name }}</h2>
+  <div class="container">
+    <div class="products-show">
+      <h2>{{ product.name }}</h2>
 
-    <p>Description: {{ product.description }}</p>
-    <p>Price: {{ product.price }}</p>
+      <p>Description: {{ product.description }}</p>
+      <p>Price: {{ product.price }}</p>
 
-    <router-link class="btn btn-warning m-1" v-bind:to="'/products/' + product.id + '/edit'">Edit</router-link>
-    <button class="btn btn-warning m-1"v-on:click="destroyProduct()">Delete</button>
+      <router-link class="btn btn-primary m-1" v-bind:to="'/products/' + product.id + '/edit'">Edit</router-link>
+      <button class="btn btn-danger m-1"v-on:click="destroyProduct()">Delete</button>
 
-    <img v-bind:src="product.image_url">
-
-
+      <img v-bind:src="product.image_url">
+    </div>    
   </div>
 </template>
 
